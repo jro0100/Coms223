@@ -43,6 +43,10 @@ public class ArrayList<E> implements List<E>
 
 	@SuppressWarnings("unchecked")
 	public E get(int index) {
+		if(index < 0 || index >= data.length - 1)
+		{
+			throw new IllegalArgumentException("Index out of bounds");
+		}
 		return (E) data[index];
 	}
 
